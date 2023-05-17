@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+
+     {% block css_files %}{% endblock css_files %}
+
+     <title>Courseapp | {% block page_title %}{% endblock page_title %}</title>
+</head>
+<body>
+     <!-- Navbar -->
+     {% include 'partials/_nav.html' %}
+
+     <!-- Menu -->
+     <!-- Content -->
+     {% block content %}{% endblock content %}
+
+
+
+     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+     {% block js_files %}{% endblock js_files %}
+</body>
+</html>
